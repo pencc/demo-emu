@@ -1,0 +1,31 @@
+1）!!!!!!!将system.img和userdata.img目录拷到当前目录(这两个文件太大无法上传github)
+
+
+2）解压root.tar.gz
+$ tar xf root.tar.gz
+
+3）run
+$ ./run.sh
+
+4）vnc显示
+浏览器vnc登录(完成操作后按提示输入url即可)： 
+$ tar xf noVNC.tar.gz
+$ ./noVNC/utils/launch.sh --vnc localhost:5901
+
+5）adb链接
+$ adb disconnect 
+$ adb connect 127.0.0.1:5566 
+$ adb shell 
+多台设备时的adb选择： 
+$ adb devices  
+List of devices attached 
+emulator-5568    device 
+emulator-5566    device 
+$ adb -s emulator-5568 shell
+
+6）adb基础测试
+6.1）获取点击事件坐标
+$ adb shell getevent -tl
+6.2）模拟点击事件
+$ adb shell input tap 294 763
+
