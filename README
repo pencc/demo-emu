@@ -1,4 +1,4 @@
-1）!!!!!!!将system.img和userdata.img目录拷到当前目录(这两个文件太大无法上传github)
+1）!!!!!!!将system.img和userdata-qemu.img目录拷到当前目录(这两个文件太大无法上传github)
 
 
 2）解压root.tar.gz
